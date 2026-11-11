@@ -117,7 +117,7 @@ def create_presentation():
     p1.space_after = Pt(8)
 
     p2 = tf1.add_paragraph()
-    p2.text = "A Smart, Dual-Engine Conversational AI with Live Web Search, Visual Recognition, and Telegram & CLI Deployment"
+    p2.text = "A Smart, Dual-Engine Conversational AI Telegram Bot with Live Web Search, Character Vision, and Private Local Inference"
     p2.font.name = "Arial"
     p2.font.size = Pt(16)
     p2.font.color.rgb = RGBColor(203, 213, 225)
@@ -185,31 +185,31 @@ def create_presentation():
     # =========================================================================
     s2 = prs.slides.add_slide(blank_layout)
     add_slide_header(s2, "What is Medusa AI?", "01 | PROJECT OVERVIEW",
-                     "A powerful AI assistant combining lightning-fast cloud speed with 100% private local hardware.")
+                     "An intelligent Telegram assistant uniting fast cloud intelligence with 100% private local hardware.")
 
     cards_data_s2 = [
         ("⚡ Dual Engine Modes",
          "The Best of Both Worlds",
          [
-             "• High-speed Cloud Mode: Answers in milliseconds for general questions.",
-             "• 100% Private Local Mode: Runs directly on your GPU without cloud servers.",
-             "• Seamlessly toggle between modes with a single click or command.",
+             "• High-speed Cloud Mode: Delivers answers in milliseconds for everyday questions.",
+             "• 100% Private Local Mode: Runs directly on local GPU without sending data to the cloud.",
+             "• Seamlessly toggle between engines using interactive inline keyboard buttons.",
          ],
          ACCENT_BLUE),
         ("🌐 Live Web Knowledge",
          "Always Current & Accurate",
          [
-             "• Automatically searches the live web for breaking news, stock prices, or events.",
-             "• Overcomes static model cutoffs without needing huge vector databases.",
-             "• Cites sources and summarizes facts cleanly for the user.",
+             "• Automatically queries the live internet for breaking news, stock prices, or sports.",
+             "• Overcomes static model cutoffs without requiring heavy vector databases.",
+             "• Cites reliable sources and synthesizes factual answers directly in chat.",
          ],
          CYAN_ACCENT),
-        ("📱 Available Everywhere",
-         "Mobile, Desktop & Terminal",
+        ("📱 Native Telegram Bot",
+         "Convenient Worldwide Access",
          [
-             "• Telegram Bot (@aimedusaroobot): Chat naturally from any phone or PC.",
-             "• Standalone CLI (medusaai): Pip-installable terminal tool for developers.",
-             "• Zero bloated web wrappers; fast, lightweight, and responsive.",
+             "• Available on iOS, Android, macOS, and Windows via Telegram (@aimedusaroobot).",
+             "• Zero installation required for users; simply open chat and start talking.",
+             "• Interactive buttons, live typing indicators, and clean formatted messages.",
          ],
          EMERALD),
     ]
@@ -249,20 +249,20 @@ def create_presentation():
     # =========================================================================
     s3 = prs.slides.add_slide(blank_layout)
     add_slide_header(s3, "Why Did We Build Medusa AI?", "02 | THE PROBLEM",
-                     "Today's AI chatbots suffer from four major limitations that impact privacy, accuracy, and usability.")
+                     "Today's AI chatbots suffer from four major limitations that impact privacy, accuracy, and user convenience.")
 
     probs = [
         ("🔒 Cloud-Only & No Privacy",
-         "Standard chatbots send all your personal messages and private documents to third-party cloud servers. If the internet fails, the chatbot stops working completely.",
+         "Standard chatbots transmit all personal chats and confidential files to proprietary cloud servers. If internet access goes down, the chatbot fails completely.",
          ROSE_ACCENT),
         ("📅 Outdated Knowledge",
          "Pre-trained models are frozen in time with static knowledge cutoffs. They cannot tell you today's sports scores, live stock valuations, or recent breaking news.",
          AMBER_ACCENT),
         ("🖼️ Generic Vision AI",
-         "When shown an image, most models give generic artistic descriptions ('a person with hair') rather than recognizing specific anime, game, or movie characters.",
+         "When shown an image, standard bots provide superficial artistic commentary ('a person with hair') rather than recognizing specific anime, game, or pop culture characters.",
          ACCENT_BLUE),
-        ("💻 Bloated Desktop Apps",
-         "Popular AI desktop apps consume 1–2 GB of RAM just to render chat bubbles. Developers working inside command terminals lacked a simple, lightweight tool.",
+        ("🌐 Clunky Web Interfaces",
+         "Web-based chatbots require signing in through browsers, solving captchas, and consuming excessive RAM just to chat. Users prefer instant messaging apps like Telegram.",
          EMERALD),
     ]
 
@@ -296,20 +296,20 @@ def create_presentation():
     # =========================================================================
     s4 = prs.slides.add_slide(blank_layout)
     add_slide_header(s4, "Key Project Goals", "03 | OBJECTIVES",
-                     "Clear, practical goals designed to overcome the limitations of current AI assistants.")
+                     "Practical goals focused on building a dependable, private, and capable Telegram assistant.")
 
     objs = [
         ("⚡ Hybrid Dual-Engine Inference",
-         "Give users the freedom to choose between lightning-fast cloud LPUs (>300 tokens/sec) and 100% private, offline neural models running on local NVIDIA GPUs.",
+         "Provide users with both ultra-fast cloud LPUs (>300 tokens/sec) and 100% private, offline neural models running on local NVIDIA GPUs.",
          ACCENT_BLUE),
         ("🔍 Zero-Vector Live Web Search",
-         "Automatically detect when a query needs current information, search DuckDuckGo in real-time, and synthesize factual answers with zero setup required.",
+         "Automatically detect when questions require current facts, fetch live DuckDuckGo results, and synthesize up-to-date answers in real time.",
          CYAN_ACCENT),
         ("🎯 Character-Level Visual Intelligence",
-         "Accurately recognize specific anime, game, and movie characters from photos, and track photo replies so users can ask natural follow-up questions.",
+         "Accurately recognize anime, game, and celebrity figures from photos, and maintain photo reply memory so users can ask natural follow-up questions.",
          EMERALD),
-        ("🚀 Frictionless Telegram & CLI Access",
-         "Build a polished Telegram bot with interactive buttons and clean formatting, plus a pip-installable command-line package (`medusaai`) for developers.",
+        ("🚀 Frictionless Telegram Experience",
+         "Design an intuitive Telegram bot with one-tap inline buttons, clean markdown-to-HTML formatting, and respectful group chat privacy.",
          DARK_NAVY),
     ]
 
@@ -326,7 +326,7 @@ def create_presentation():
         pt = tf.paragraphs[0]
         pt.text = f"Goal 0{i+1}: {title}"
         pt.font.name = "Arial"
-        pt.font.size = Pt(15)
+        pt.font.size = Pt(15.5)
         pt.font.bold = True
         pt.font.color.rgb = col
         pt.space_after = Pt(6)
@@ -343,7 +343,7 @@ def create_presentation():
     # =========================================================================
     s5 = prs.slides.add_slide(blank_layout)
     add_slide_header(s5, "System Architecture & Dual-Engine Workflow", "04 | SYSTEM ARCHITECTURE",
-                     "A unified backend that intelligently routes user prompts between cloud LPUs and local GPU models.")
+                     "A unified backend that intelligently routes Telegram prompts between cloud LPUs and local GPU models.")
 
     # Left Column: Dual-Engine Architecture Card
     c_arch = add_card(s5, Inches(0.8), Inches(1.8), Inches(5.1), Inches(5.1))
@@ -360,7 +360,7 @@ def create_presentation():
 
     arch_points = [
         ("Default Cloud Engine:",
-         "Powered by Groq LPUs for instant conversational flow (>300 t/s). Equipped with real-time web retrieval for up-to-date facts."),
+         "Powered by Groq LPUs for rapid conversational flow (>300 t/s). Features DuckDuckGo live web search for up-to-date facts."),
         ("Medusa Local Engine:",
          "Runs llama-server on port 8088 offloaded to an NVIDIA RTX 2050 GPU. Uses quantized GGUF weights for 100% offline privacy."),
         ("Smart Offline Failover:",
@@ -384,7 +384,7 @@ def create_presentation():
 
     # Right Column: Framed Backend Terminal Screenshot Card
     c_img5 = add_card(s5, Inches(6.1), Inches(1.8), Inches(6.43), Inches(5.1))
-    
+
     # Textbox inside card for clean title & subtitle without collision
     h_box5 = s5.shapes.add_textbox(Inches(6.3), Inches(1.95), Inches(6.03), Inches(0.65))
     tf_h5 = h_box5.text_frame
@@ -621,73 +621,86 @@ def create_presentation():
         pic8.line.width = Pt(1)
 
     # =========================================================================
-    # SLIDE 9: STANDALONE CLI PACKAGE (medusaai)
+    # SLIDE 9: TELEGRAM COMMANDS & USER INTERACTION FLOW
     # =========================================================================
     s9 = prs.slides.add_slide(blank_layout)
-    add_slide_header(s9, "Developer CLI Tool: medusaai", "08 | DEVELOPER CLI",
-                     "An independent, pip-installable command-line package bringing Medusa AI to any developer terminal.")
+    add_slide_header(s9, "Telegram Commands & User Interaction Flow", "08 | TELEGRAM CONTROL",
+                     "An intuitive command suite and automated interaction rules designed for smooth messaging.")
 
-    # Left Card: Package & Installation
-    c_pkg = add_card(s9, Inches(0.8), Inches(1.8), Inches(5.75), Inches(5.1))
-    tf_pkg = c_pkg.text_frame
-    tf_pkg.word_wrap = True
+    # Left Card: Command Reference
+    c_cmd = add_card(s9, Inches(0.8), Inches(1.8), Inches(5.75), Inches(5.1))
+    tf_cmd = c_cmd.text_frame
+    tf_cmd.word_wrap = True
 
-    p_p_title = tf_pkg.paragraphs[0]
-    p_p_title.text = "📦 Independent Python Package"
-    p_p_title.font.name = "Arial"
-    p_p_title.font.size = Pt(16)
-    p_p_title.font.bold = True
-    p_p_title.font.color.rgb = ACCENT_BLUE
-    p_p_title.space_after = Pt(10)
+    p_cmd_title = tf_cmd.paragraphs[0]
+    p_cmd_title.text = "🤖 Supported Telegram Commands"
+    p_cmd_title.font.name = "Arial"
+    p_cmd_title.font.size = Pt(16)
+    p_cmd_title.font.bold = True
+    p_cmd_title.font.color.rgb = ACCENT_BLUE
+    p_cmd_title.space_after = Pt(10)
 
-    pkg_items = [
-        ("Package Name:", "medusaai (Version 1.0.0)"),
-        ("Installation:", "pip install medusaai (or pip install -e .)"),
-        ("Terminal Command:", "Simply type 'medusa' or 'medusaai'"),
-        ("Isolated Folder:", "Packaged cleanly in its own dedicated project folder"),
-        ("Persistent Config:", "API keys stored in ~/.medusaai/config.json with zero repeat prompts"),
-        ("Zero Overhead:", "Lightweight and instant; consumes <50MB RAM compared to bloated desktop apps"),
+    commands_list = [
+        ("/start", "Launches the bot welcome menu, capabilities overview, and inline mode switch buttons."),
+        ("/default", "Switches active engine to Cloud Mode (high-speed Groq LPUs with live DuckDuckGo web search)."),
+        ("/medusa", "Switches active engine to Local Mode (100% private offline neural model on local GPU)."),
+        ("/help", "Displays a quick-start guide, available features, and tips for photo & document analysis."),
+        ("/reset", "Clears the active conversation context window to start a fresh dialogue session."),
     ]
-    for lbl, val in pkg_items:
-        p = tf_pkg.add_paragraph()
-        p.text = f"•  {lbl} {val}"
-        p.font.name = "Arial"
-        p.font.size = Pt(11.5)
-        p.font.color.rgb = TEXT_DARK
-        p.space_after = Pt(8)
+    for cmd, desc in commands_list:
+        p_c = tf_cmd.add_paragraph()
+        p_c.text = f"•  {cmd} :"
+        p_c.font.name = "Consolas"
+        p_c.font.size = Pt(11.5)
+        p_c.font.bold = True
+        p_c.font.color.rgb = DARK_NAVY
+        p_c.space_after = Pt(1)
 
-    # Right Card: Terminal REPL Environment
-    c_repl = add_card(s9, Inches(6.78), Inches(1.8), Inches(5.75), Inches(5.1), bg_color=DARK_NAVY, border_color=DEEP_SLATE)
-    tf_repl = c_repl.text_frame
-    tf_repl.word_wrap = True
+        p_cd = tf_cmd.add_paragraph()
+        p_cd.text = f"    {desc}"
+        p_cd.font.name = "Arial"
+        p_cd.font.size = Pt(10.5)
+        p_cd.font.color.rgb = TEXT_MUTED
+        p_cd.space_after = Pt(6)
 
-    p_r_title = tf_repl.paragraphs[0]
-    p_r_title.text = "💻 Terminal REPL Interface"
+    # Right Card: Smart Telegram Interaction Rules
+    c_rules = add_card(s9, Inches(6.78), Inches(1.8), Inches(5.75), Inches(5.1))
+    tf_rules = c_rules.text_frame
+    tf_rules.word_wrap = True
+
+    p_r_title = tf_rules.paragraphs[0]
+    p_r_title.text = "⚙️ Automated Interaction Rules"
     p_r_title.font.name = "Arial"
     p_r_title.font.size = Pt(16)
     p_r_title.font.bold = True
     p_r_title.font.color.rgb = CYAN_ACCENT
     p_r_title.space_after = Pt(10)
 
-    cli_points = [
-        "• Bold ASCII Banner: Renders crimson 'Medusa' branding on launch.",
-        "• Real-Time Info: Displays live Date, Time, and Author: Tsukiziro.",
-        "• Dual Mode Switch: Toggle anytime via /default or /medusa.",
-        "• Live Web Search: Automatically triggered for current questions.",
-        "• Built-in Commands:",
-        "    - /default       : Switch to Cloud Groq Engine",
-        "    - /medusa       : Switch to Local GPU Engine",
-        "    - /key <api_key>: Set or update your Groq API key",
-        "    - /clear        : Reset conversation memory",
-        "    - /exit         : Close the session",
+    rules = [
+        ("🎛️ Inline Keyboard Callbacks:",
+         "Tapping [⚡ Default Mode] or [🐍 Medusa Mode] buttons instantly switches engines without having to type commands manually."),
+        ("👥 Group Chat Privacy Filter:",
+         "In group chats, Medusa stays silent during casual chatter. It only responds when directly @mentioned or replied to, keeping groups clean."),
+        ("✂️ 4,096-Character Message Chunking:",
+         "Telegram limits messages to 4,096 characters. Medusa automatically splits long essays, code files, and research summaries by paragraphs."),
+        ("🧠 12-Turn Context Sliding Window:",
+         "Maintains conversation history per user up to 12 turns, enabling natural multi-turn discussions while preventing token overflows."),
     ]
-    for cp in cli_points:
-        p = tf_repl.add_paragraph()
-        p.text = cp
-        p.font.name = "Consolas"
-        p.font.size = Pt(10.5)
-        p.font.color.rgb = TEXT_WHITE
-        p.space_after = Pt(5)
+    for r_title, r_desc in rules:
+        pr_t = tf_rules.add_paragraph()
+        pr_t.text = f"• {r_title}"
+        pr_t.font.name = "Arial"
+        pr_t.font.size = Pt(12)
+        pr_t.font.bold = True
+        pr_t.font.color.rgb = DARK_NAVY
+        pr_t.space_after = Pt(2)
+
+        pr_d = tf_rules.add_paragraph()
+        pr_d.text = r_desc
+        pr_d.font.name = "Arial"
+        pr_d.font.size = Pt(11)
+        pr_d.font.color.rgb = TEXT_MUTED
+        pr_d.space_after = Pt(8)
 
     # =========================================================================
     # SLIDE 10: PERFORMANCE BENCHMARKS & TESTING
@@ -747,10 +760,10 @@ def create_presentation():
     tc_items = [
         ("✔ Dual-Engine Switching:", "Verified smooth toggling between /default (cloud) and /medusa (local)."),
         ("✔ Offline Failover:", "Gracefully warns user when the local server is stopped, preventing crashes."),
-        ("✔ Live Web Retrieval:", "Accurately retrieved current live sports scores, weather, and news."),
+        ("✔ Live Web Retrieval:", "Accurately retrieved current live sports scores, weather, and news via DuckDuckGo."),
         ("✔ Anime & Character Vision:", "Accurately identified Makima from Chainsaw Man and answered follow-up queries."),
         ("✔ Formatting & Clean Output:", "Eliminated raw markdown asterisks (***), outputting clean Telegram HTML."),
-        ("✔ Independent CLI:", "Installed medusaai cleanly with pip and executed from any terminal folder."),
+        ("✔ Group Chat Privacy Filter:", "Confirmed bot stays silent in groups until directly @mentioned or replied to."),
     ]
     for lbl, desc in tc_items:
         p = tf_b.add_paragraph()
@@ -765,7 +778,7 @@ def create_presentation():
     # =========================================================================
     s11 = prs.slides.add_slide(blank_layout)
     add_slide_header(s11, "Live System Demonstration Highlights", "10 | SYSTEM VALIDATION",
-                     "Real-world validation confirming end-to-end functionality across mobile, desktop, and terminal.")
+                     "Real-world validation confirming end-to-end functionality across mobile and desktop Telegram sessions.")
 
     demo_cards = [
         ("⚡ Dual Engine Demo",
@@ -777,19 +790,19 @@ def create_presentation():
          ],
          ACCENT_BLUE),
         ("🖼️ Visual Recognition Demo",
-         "Character & Document Analysis",
+         "Character & Photo Follow-Ups",
          [
              "• Upload an anime/game image: Medusa accurately identifies the character name and franchise.",
              "• Reply 'who is she?': Contextual memory recalls the previous photo seamlessly.",
-             "• Send a research PDF: Medusa extracts and summarizes all pages in seconds.",
+             "• Verified with complex anime illustrations and pop culture figures.",
          ],
          EMERALD),
-        ("📦 CLI Distribution Demo",
-         "Terminal Power for Developers",
+        ("📑 File & Document Demo",
+         "Multi-Page PDFs & Code Archives",
          [
-             "• Tested global installation via pip in an isolated environment.",
-             "• Runs cleanly in Windows PowerShell and Linux Bash.",
-             "• Fast, responsive terminal REPL with zero Electron GUI bloat.",
+             "• Upload a research PDF: Extracted and summarized chapters in seconds via PyMuPDF.",
+             "• Send software ZIP archives: Analyzed directory structure and code quality automatically.",
+             "• Audio voice notes transcribed into clean text replies.",
          ],
          CYAN_ACCENT),
     ]
@@ -867,8 +880,8 @@ def create_presentation():
         "• Engineered a hybrid AI assistant uniting fast cloud LPUs with private local GPU models.",
         "• Implemented zero-vector live web search for up-to-date factual answers.",
         "• Solved character recognition and photo follow-up questions for anime, gaming, and pop culture.",
-        "• Delivered a smooth Telegram Bot with interactive buttons and clean HTML formatting.",
-        "• Packaged a standalone pip library (`medusaai`) for developers worldwide.",
+        "• Delivered a smooth Telegram Bot (@aimedusaroobot) with interactive buttons and clean HTML formatting.",
+        "• Created a reliable, privacy-first personal assistant accessible worldwide on mobile & desktop.",
     ]
     for cp in c_points:
         p = tf_c.add_paragraph()
