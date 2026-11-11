@@ -1,0 +1,23 @@
+# Environment variables & secrets (CRITICAL: Never commit to GitHub)
+.env
+key.txt
+*.token
+
+# Large Model files (GitHub rejects files > 100MB)
+*.gguf
+*.bin
+*.pt
+*.safetensors
+medusa-1.8-flash.gguf
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+.DS_Store
